@@ -1,0 +1,334 @@
+Here is the complete code — click anywhere in the box below, press **Ctrl+A** to select all of it, then **Ctrl+C** to copy:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AKD Law | Police Station Representation</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap');
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--navy:#1B2A4A;--navy2:#243356;--gold:#B8860B;--gold2:#D4A017;--gold3:#F0C040;--cream:#FDFBF7;--offwhite:#F5F1EA;--text:#1A1A2E;--muted:#5A6070;--light:#E8E4DC;--serif:'Playfair Display',Georgia,serif;--sans:'Inter','Segoe UI',system-ui,sans-serif;}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--cream);color:var(--text);font-weight:400;line-height:1.7;overflow-x:hidden}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1rem 6vw;background:rgba(253,251,247,0.97);border-bottom:1px solid rgba(184,134,11,0.2);backdrop-filter:blur(8px);}
+.logo{font-family:var(--serif);font-size:1.5rem;font-weight:700;color:var(--navy);text-decoration:none;letter-spacing:.04em;}
+.logo span{color:var(--gold)}
+.nav-links{display:flex;align-items:center;gap:2rem}
+.nav-links a{font-size:.8rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color .2s;}
+.nav-links a:hover{color:var(--navy)}
+.nav-btn{background:var(--navy);color:#fff !important;padding:.55rem 1.4rem;font-size:.78rem !important;font-weight:600 !important;letter-spacing:.1em !important;transition:background .2s !important;}
+.nav-btn:hover{background:var(--navy2) !important}
+.hero{padding-top:72px;min-height:100vh;display:grid;grid-template-columns:1fr 1fr;background:var(--cream);}
+.hero-text{display:flex;flex-direction:column;justify-content:center;padding:5rem 5vw 5rem 6vw;background:var(--cream);}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:.7rem;margin-bottom:1.8rem;}
+.hero-eyebrow-line{width:32px;height:2px;background:var(--gold)}
+.hero-eyebrow span{font-size:.72rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);}
+.hero-text h1{font-family:var(--serif);font-size:clamp(2.6rem,4.5vw,4rem);font-weight:700;line-height:1.1;color:var(--navy);margin-bottom:1.6rem;}
+.hero-text h1 em{font-style:italic;color:var(--gold)}
+.hero-text p{font-size:1.05rem;color:var(--muted);line-height:1.85;max-width:440px;margin-bottom:2.5rem;}
+.hero-btns{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:3rem}
+.btn-primary{display:inline-block;padding:.85rem 2rem;background:var(--navy);color:#fff;font-size:.8rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;transition:background .2s;border:2px solid var(--navy);}
+.btn-primary:hover{background:var(--navy2);border-color:var(--navy2)}
+.btn-secondary{display:inline-block;padding:.85rem 2rem;background:transparent;color:var(--navy);font-size:.8rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;border:2px solid var(--navy);transition:all .2s;}
+.btn-secondary:hover{background:var(--navy);color:#fff}
+.hero-trust{display:flex;gap:2rem;flex-wrap:wrap;padding-top:2rem;border-top:1px solid var(--light);}
+.hero-trust-item{display:flex;flex-direction:column;gap:.2rem;}
+.trust-num{font-family:var(--serif);font-size:1.6rem;font-weight:700;color:var(--navy);}
+.trust-lbl{font-size:.72rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.hero-visual{position:relative;overflow:hidden;background:var(--navy);display:flex;align-items:flex-end;justify-content:center;}
+.hero-visual-bg{position:absolute;inset:0;background:linear-gradient(180deg,#87CEEB 0%,#B0D9F0 30%,#C8E8F5 55%,#D4EEF7 70%,#E8F4F8 80%,#F0F6F8 88%,#D8E8D0 92%,#C8DCC0 100%);}
+.sun{position:absolute;top:8%;right:18%;width:80px;height:80px;border-radius:50%;background:radial-gradient(circle,#FFFDE0 30%,#FFE566 60%,rgba(255,220,80,.3) 80%,transparent 100%);box-shadow:0 0 40px 20px rgba(255,230,100,.4),0 0 80px 40px rgba(255,210,60,.15);}
+.cloud{position:absolute;border-radius:50px;background:rgba(255,255,255,.9)}
+.cloud1{top:15%;left:5%;width:160px;height:45px;border-radius:50px}
+.cloud1::before{content:'';position:absolute;width:80px;height:60px;background:rgba(255,255,255,.9);border-radius:50%;top:-25px;left:20px}
+.cloud1::after{content:'';position:absolute;width:60px;height:50px;background:rgba(255,255,255,.9);border-radius:50%;top:-18px;left:70px}
+.cloud2{top:22%;right:8%;width:120px;height:35px}
+.cloud2::before{content:'';position:absolute;width:60px;height:50px;background:rgba(255,255,255,.9);border-radius:50%;top:-20px;left:15px}
+.cloud3{top:10%;left:35%;width:90px;height:28px}
+.cloud3::before{content:'';position:absolute;width:50px;height:42px;background:rgba(255,255,255,.9);border-radius:50%;top:-16px;left:10px}
+.bld{flex-shrink:0;position:relative}
+.ground-strip{position:absolute;bottom:0;left:0;right:0;height:22%;background:linear-gradient(to top,#3A6B35 0%,#4A7D44 40%,#5A8F52 70%,#6BA060 100%);}
+.pavement{position:absolute;bottom:0;left:0;right:0;height:10%;background:linear-gradient(to top,#8C8C8C 0%,#A0A0A0 40%,#B0B0B0 100%);}
+.road-line{position:absolute;bottom:4%;left:0;right:0;height:2px;background:repeating-linear-gradient(90deg,#FFE000 0,#FFE000 30px,transparent 30px,transparent 60px);}
+.bld-glass{background:linear-gradient(180deg,#5B8FA8 0%,#4A7A94 30%,#3A6580 60%,#2E5570 100%)}
+.bld-stone{background:linear-gradient(180deg,#C8B898 0%,#B8A888 40%,#A89878 100%)}
+.bld-concrete{background:linear-gradient(180deg,#9AA0A8 0%,#8A9098 40%,#7A8088 100%)}
+.bld-dark{background:linear-gradient(180deg,#3A4A5A 0%,#2A3A4A 40%,#1A2A3A 100%)}
+.bld-glass::after,.bld-stone::after,.bld-concrete::after{content:'';position:absolute;inset:8px;background-image:repeating-linear-gradient(0deg,transparent,transparent 12px,rgba(0,0,0,.15) 12px,rgba(0,0,0,.15) 14px),repeating-linear-gradient(90deg,transparent,transparent 10px,rgba(0,0,0,.12) 10px,rgba(0,0,0,.12) 12px);}
+.bld-glass::after{background-image:repeating-linear-gradient(0deg,transparent,transparent 10px,rgba(255,255,255,.08) 10px,rgba(255,255,255,.08) 12px),repeating-linear-gradient(90deg,transparent,transparent 8px,rgba(255,255,255,.06) 8px,rgba(255,255,255,.06) 10px);}
+.main-office-body{width:100%;height:340px;background:linear-gradient(160deg,#8BAFC8 0%,#6A96B4 25%,#4A7A9B 50%,#3A6A8B 75%,#2A5A7B 100%);position:relative;box-shadow:8px 0 30px rgba(0,0,0,.25),-4px 0 20px rgba(0,0,0,.15);}
+.main-office-body::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(90deg,rgba(255,255,255,.08) 0px,rgba(255,255,255,.12) 2px,transparent 2px,transparent 24px);}
+.main-office-body::after{content:'';position:absolute;inset:0;background:repeating-linear-gradient(0deg,rgba(0,0,0,.1) 0px,rgba(0,0,0,.05) 1px,transparent 1px,transparent 18px);}
+.office-reflect{position:absolute;top:0;left:15%;width:35%;height:100%;background:linear-gradient(180deg,rgba(255,255,255,.18) 0%,rgba(135,206,235,.12) 50%,rgba(255,255,255,.05) 100%);}
+.office-col{position:absolute;bottom:0;width:6px;background:linear-gradient(180deg,#D0C8B0,#B0A898);height:55px;}
+.office-col1{left:15%}.office-col2{left:35%}.office-col3{right:35%}.office-col4{right:15%}
+.office-sign{position:absolute;bottom:52px;left:50%;transform:translateX(-50%);width:120px;height:14px;background:#1B2A4A;display:flex;align-items:center;justify-content:center;}
+.office-roof{width:110%;margin-left:-5%;height:16px;background:linear-gradient(180deg,#9BBDD6,#6A96B4);border-bottom:3px solid rgba(200,169,110,.5);}
+.office-spire{width:6px;height:40px;background:linear-gradient(180deg,#8BAFC8,#5A8AAA);margin:0 auto;}
+.office-spire-tip{width:2px;height:20px;background:#C8A96E;margin:0 auto;}
+.figure-wrap{position:absolute;bottom:22%;left:50%;transform:translateX(30px);z-index:10;filter:drop-shadow(4px 0 0 rgba(0,0,0,.15));}
+.figure-wrap svg{display:block;height:200px;width:auto;}
+.figure-shadow{position:absolute;bottom:21.5%;left:50%;transform:translateX(30px);z-index:9;width:60px;height:12px;background:radial-gradient(ellipse,rgba(0,0,0,.35) 0%,transparent 70%);border-radius:50%;}
+section{padding:6rem 6vw}
+.sec-label{display:flex;align-items:center;gap:.8rem;margin-bottom:.8rem;font-size:.7rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);}
+.sec-label::before{content:'';display:block;width:28px;height:2px;background:var(--gold)}
+h2{font-family:var(--serif);font-size:clamp(2rem,3.5vw,3rem);font-weight:700;line-height:1.15;color:var(--navy);margin-bottom:1.2rem;}
+h2 em{font-style:italic;color:var(--gold)}
+.section-lead{font-size:1rem;color:var(--muted);max-width:580px;line-height:1.85}
+.why-sec{background:var(--offwhite)}
+.why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;margin-top:3.5rem;}
+.why-card{background:#fff;padding:2.2rem 1.8rem;border:1px solid var(--light);border-top:3px solid var(--gold);transition:box-shadow .3s,transform .3s;}
+.why-card:hover{box-shadow:0 8px 30px rgba(0,0,0,.08);transform:translateY(-3px)}
+.why-icon{width:44px;height:44px;border-radius:50%;background:var(--navy);display:flex;align-items:center;justify-content:center;margin-bottom:1.2rem;font-size:1.1rem;}
+.why-card h3{font-family:var(--serif);font-size:1.15rem;font-weight:600;color:var(--navy);margin-bottom:.6rem;}
+.why-card p{font-size:.88rem;color:var(--muted);line-height:1.8}
+.how-sec{background:#fff}
+.how-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin-top:3.5rem;position:relative;}
+.how-steps::before{content:'';position:absolute;top:36px;left:calc(16.6% + 1rem);right:calc(16.6% + 1rem);height:2px;background:linear-gradient(90deg,var(--gold),var(--gold2),var(--gold));}
+.step{text-align:center;padding:1rem}
+.step-circle{width:72px;height:72px;border-radius:50%;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem;font-family:var(--serif);font-size:1.6rem;font-weight:700;border:4px solid var(--cream);box-shadow:0 0 0 2px var(--navy);position:relative;z-index:1;}
+.step h3{font-family:var(--serif);font-size:1.15rem;font-weight:600;color:var(--navy);margin-bottom:.5rem}
+.step p{font-size:.88rem;color:var(--muted);line-height:1.8}
+.services-sec{background:var(--navy)}
+.services-sec .sec-label::before{background:var(--gold3)}
+.services-sec .sec-label{color:var(--gold3)}
+.services-sec h2{color:#fff}
+.services-sec h2 em{color:var(--gold3)}
+.services-sec .section-lead{color:rgba(255,255,255,.65)}
+.services-layout{display:grid;grid-template-columns:1fr 1fr;gap:4rem;margin-top:3.5rem;align-items:start;}
+.svc-list{list-style:none}
+.svc-item{display:flex;gap:1.2rem;padding:1.5rem 0;border-bottom:1px solid rgba(255,255,255,.1);}
+.svc-check{width:28px;height:28px;border-radius:50%;background:rgba(200,169,110,.2);border:1px solid var(--gold);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;font-size:.75rem;color:var(--gold3);}
+.svc-item h4{font-family:var(--serif);font-size:1.05rem;font-weight:600;color:#fff;margin-bottom:.3rem;}
+.svc-item p{font-size:.86rem;color:rgba(255,255,255,.6);line-height:1.75}
+.services-right{display:flex;flex-direction:column;gap:1.2rem}
+.stat-box{background:rgba(255,255,255,.06);border:1px solid rgba(200,169,110,.25);padding:2rem 2.2rem;}
+.stat-box .num{font-family:var(--serif);font-size:3.2rem;font-weight:700;color:var(--gold3);line-height:1;margin-bottom:.3rem;}
+.stat-box .lbl{font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.5)}
+.accred-box{background:rgba(200,169,110,.1);border:1px solid rgba(200,169,110,.4);padding:1.5rem;display:flex;align-items:center;gap:1rem;}
+.accred-box .shield-icon{flex-shrink:0}
+.accred-box p{font-size:.85rem;color:#fff;line-height:1.6}
+.accred-box p strong{color:var(--gold3);display:block;font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;margin-bottom:.2rem}
+.about-sec{background:var(--offwhite)}
+.about-layout{display:grid;grid-template-columns:280px 1fr;gap:5rem;align-items:start;margin-top:3.5rem;}
+.about-portrait{background:var(--navy);aspect-ratio:3/4;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;}
+.portrait-initials{font-family:var(--serif);font-size:5rem;font-weight:700;color:rgba(200,169,110,.3);letter-spacing:.1em;position:relative;z-index:1;}
+.about-portrait::before{content:'';position:absolute;bottom:0;left:0;right:0;height:40%;background:linear-gradient(to top,rgba(200,169,110,.15),transparent);}
+.about-portrait-label{position:absolute;bottom:0;left:0;right:0;background:var(--gold);padding:.6rem 1rem;text-align:center;font-size:.72rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--navy);}
+.about-title{font-size:.74rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem;}
+.about-bio{font-size:.96rem;color:var(--muted);line-height:1.95;margin-bottom:1.1rem}
+.cred-tags{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.5rem}
+.cred-tag{font-size:.72rem;font-weight:500;letter-spacing:.08em;color:var(--navy);border:1px solid rgba(27,42,74,.3);padding:.35rem .9rem;background:#fff;}
+.contact-sec{background:var(--cream);text-align:center;border-top:4px solid var(--gold);}
+.contact-sec h2{margin-bottom:.8rem}
+.email-cta{display:inline-block;font-family:var(--serif);font-size:clamp(1.6rem,3.5vw,2.5rem);font-weight:700;color:var(--navy);text-decoration:none;border-bottom:3px solid var(--gold);padding-bottom:.2rem;transition:color .2s;margin-bottom:2.5rem;}
+.email-cta:hover{color:var(--gold)}
+.avail-pill{display:inline-flex;align-items:center;gap:.6rem;background:var(--navy);color:#fff;padding:.6rem 1.4rem;font-size:.78rem;font-weight:500;letter-spacing:.06em;border-radius:999px;}
+.avail-dot{width:8px;height:8px;border-radius:50%;background:#4DBF8A;animation:pulse 2s ease-in-out infinite;}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.85)}}
+footer{background:var(--navy);color:rgba(255,255,255,.5);padding:2rem 6vw;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;}
+.footer-logo{font-family:var(--serif);font-size:1.1rem;font-weight:700;color:#fff;letter-spacing:.08em}
+.footer-logo span{color:var(--gold3)}
+footer p{font-size:.76rem}
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .7s,transform .7s}
+.reveal.in{opacity:1;transform:none}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}
+@media(max-width:960px){.hero{grid-template-columns:1fr}.hero-visual{height:50vw;min-height:300px}.why-grid{grid-template-columns:1fr 1fr}.services-layout{grid-template-columns:1fr}.about-layout{grid-template-columns:1fr}}
+@media(max-width:640px){.nav-links a:not(.nav-btn){display:none}.how-steps{grid-template-columns:1fr}.how-steps::before{display:none}.why-grid{grid-template-columns:1fr}section{padding:4rem 5vw}}
+</style>
+</head>
+<body>
+<nav>
+  <a href="#" class="logo">AKD<span> Law</span></a>
+  <div class="nav-links">
+    <a href="#why">Why Us</a>
+    <a href="#services">Services</a>
+    <a href="#about">About</a>
+    <a href="mailto:amy@akdlaw.co.uk" class="nav-btn">Instruct Us</a>
+  </div>
+</nav>
+<div class="hero">
+  <div class="hero-text">
+    <div class="hero-eyebrow">
+      <div class="hero-eyebrow-line"></div>
+      <span>Police Station Representation</span>
+    </div>
+    <h1>When your firm<br>needs cover,<br><em>we are there.</em></h1>
+    <p>AKD Law provides fully accredited, freelance police station representation for solicitor firms across East London and North Essex — available 24 hours a day, every day of the year.</p>
+    <div class="hero-btns">
+      <a href="mailto:amy@akdlaw.co.uk" class="btn-primary">Instruct Ms Dulai</a>
+      <a href="#services" class="btn-secondary">Our Services</a>
+    </div>
+    <div class="hero-trust">
+      <div class="hero-trust-item"><span class="trust-num">24/7</span><span class="trust-lbl">Availability</span></div>
+      <div class="hero-trust-item"><span class="trust-num">E &amp; NE</span><span class="trust-lbl">East London &amp; Essex</span></div>
+      <div class="hero-trust-item"><span class="trust-num">LSA</span><span class="trust-lbl">Law Society Accredited</span></div>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <div class="hero-visual-bg"></div>
+    <div class="sun"></div>
+    <div class="cloud cloud1"></div>
+    <div class="cloud cloud2"></div>
+    <div class="cloud cloud3"></div>
+    <div style="bottom:22%;left:0;right:0;position:absolute;display:flex;align-items:flex-end;padding:0 5%;gap:2px;z-index:3">
+      <div class="bld bld-concrete" style="width:28px;height:120px;flex-shrink:0;position:relative"></div>
+      <div class="bld bld-stone" style="width:36px;height:90px;flex-shrink:0"></div>
+      <div class="bld bld-glass" style="width:24px;height:150px;flex-shrink:0"></div>
+      <div class="bld bld-concrete" style="width:44px;height:80px;flex-shrink:0"></div>
+      <div class="bld bld-dark" style="width:20px;height:180px;flex-shrink:0"></div>
+      <div class="bld bld-stone" style="width:32px;height:110px;flex-shrink:0"></div>
+      <div style="flex:1"></div>
+      <div style="width:170px;flex-shrink:0;display:flex;flex-direction:column;align-items:center;position:relative;z-index:5">
+        <div class="office-spire-tip"></div>
+        <div class="office-spire"></div>
+        <div class="office-roof"></div>
+        <div class="main-office-body" style="width:170px;height:310px;position:relative">
+          <div class="office-reflect"></div>
+          <div style="position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:54px;height:46px;background:rgba(5,15,30,.7);border-top:3px solid #C8A96E"><div style="position:absolute;top:6px;left:6px;right:6px;bottom:0;border:1px solid rgba(200,169,110,.4)"></div></div>
+          <div class="office-col office-col1"></div>
+          <div class="office-col office-col2"></div>
+          <div class="office-col office-col3"></div>
+          <div class="office-col office-col4"></div>
+          <div class="office-sign"></div>
+          <div style="position:absolute;bottom:-8px;left:50%;transform:translateX(-50%);width:100px;height:8px;background:#C8C0B0"></div>
+          <div style="position:absolute;bottom:-14px;left:50%;transform:translateX(-50%);width:120px;height:6px;background:#B8B0A0"></div>
+          <div style="position:absolute;bottom:-18px;left:50%;transform:translateX(-50%);width:140px;height:5px;background:#A8A098"></div>
+        </div>
+      </div>
+      <div style="flex:1"></div>
+      <div class="bld bld-stone" style="width:30px;height:105px;flex-shrink:0"></div>
+      <div class="bld bld-glass" style="width:22px;height:165px;flex-shrink:0"></div>
+      <div class="bld bld-concrete" style="width:40px;height:75px;flex-shrink:0"></div>
+      <div class="bld bld-dark" style="width:26px;height:195px;flex-shrink:0"></div>
+      <div class="bld bld-stone" style="width:34px;height:88px;flex-shrink:0"></div>
+      <div class="bld bld-glass" style="width:28px;height:135px;flex-shrink:0"></div>
+    </div>
+    <div class="ground-strip"></div>
+    <div class="pavement"></div>
+    <div class="road-line"></div>
+    <div class="figure-shadow"></div>
+    <div class="figure-wrap">
+      <svg viewBox="0 0 100 260" xmlns="http://www.w3.org/2000/svg">
+        <ellipse cx="50" cy="16" rx="14" ry="16" fill="#0D0D12"/>
+        <path d="M36 8 C35 -2 40 -10 50 -12 C60 -10 65 -2 64 8 C60 -4 40 -4 36 8Z" fill="#0D0D12"/>
+        <ellipse cx="63" cy="3" rx="8" ry="7" fill="#0D0D12"/>
+        <rect x="45" y="30" width="10" height="13" rx="2" fill="#0D0D12"/>
+        <path d="M24 44 C16 48 10 60 8 80 L7 118 L28 118 L30 90 L32 44Z" fill="#0D0D12"/>
+        <path d="M76 44 C84 48 90 60 92 80 L93 118 L72 118 L70 90 L68 44Z" fill="#0D0D12"/>
+        <path d="M32 44 L34 118 L66 118 L68 44 C62 39 56 37 50 37 C44 37 38 39 32 44Z" fill="#0D0D12"/>
+        <path d="M40 46 L32 58 L46 52Z" fill="#0D0D12"/>
+        <path d="M60 46 L68 58 L54 52Z" fill="#0D0D12"/>
+        <path d="M24 46 C14 54 8 70 10 92 L18 95 C16 74 22 58 32 52Z" fill="#0D0D12"/>
+        <ellipse cx="13" cy="97" rx="6" ry="7" transform="rotate(-10 13 97)" fill="#0D0D12"/>
+        <path d="M76 46 C86 54 92 68 90 88 L82 91 C84 72 78 58 68 52Z" fill="#0D0D12"/>
+        <rect x="82" y="90" width="18" height="15" rx="2" fill="#0D0D12"/>
+        <path d="M86 90 C86 84 100 84 100 90" fill="none" stroke="#0D0D12" stroke-width="4" stroke-linecap="round"/>
+        <line x1="82" y1="96" x2="100" y2="96" stroke="#1A1A2A" stroke-width="1.2"/>
+        <rect x="88" y="93" width="6" height="4" rx="1" fill="#1A1A2A"/>
+        <path d="M28 118 L22 196 L44 198 L50 172 L56 198 L78 196 L72 118Z" fill="#0D0D12"/>
+        <rect x="47" y="196" width="12" height="46" rx="3" fill="#0D0D12"/>
+        <rect x="31" y="196" width="12" height="42" rx="3" transform="rotate(5 37 196)" fill="#0D0D12"/>
+        <path d="M45 240 L42 252 L63 252 L62 240Z" fill="#0D0D12"/>
+        <rect x="42" y="249" width="4" height="7" rx="1" fill="#0D0D12"/>
+        <path d="M30 236 L27 247 L48 249 L47 237Z" transform="rotate(5 37 242)" fill="#0D0D12"/>
+        <rect x="27" y="244" width="4" height="7" rx="1" transform="rotate(5 29 247)" fill="#0D0D12"/>
+      </svg>
+    </div>
+  </div>
+</div>
+<section class="why-sec" id="why">
+  <div class="sec-label">Why AKD Law</div>
+  <h2>The standard your<br>clients <em>deserve.</em></h2>
+  <p class="section-lead">When the duty rota calls and your firm needs cover, you need a representative who will show up — composed, qualified and ready.</p>
+  <div class="why-grid">
+    <div class="why-card reveal"><div class="why-icon">⚡</div><h3>Rapid Response</h3><p>Available around the clock, including nights, weekends and bank holidays. When the custody sergeant calls, Ms Dulai answers.</p></div>
+    <div class="why-card reveal d1"><div class="why-icon">✦</div><h3>Fully Accredited</h3><p>Full Law Society Police Station Accreditation — the profession's benchmark for expert advice and representation at the station.</p></div>
+    <div class="why-card reveal d2"><div class="why-icon">⬡</div><h3>Firm Integration</h3><p>Clean attendance notes, Legal Aid compliance and seamless communication with your team from instruction to completion.</p></div>
+    <div class="why-card reveal d3"><div class="why-icon">◈</div><h3>Your Reputation</h3><p>We represent your firm as well as your client — the same care, confidentiality and professionalism you would deliver yourself.</p></div>
+  </div>
+</section>
+<section class="how-sec" id="how">
+  <div class="sec-label">How It Works</div>
+  <h2>Three steps.<br><em>No complication.</em></h2>
+  <p class="section-lead">Instructing AKD Law slots directly into your existing duty process.</p>
+  <div class="how-steps">
+    <div class="step reveal"><div class="step-circle">1</div><h3>Your firm is called</h3><p>The custody sergeant contacts your duty firm. You need professional cover — out of hours, double-booked, or at another station.</p></div>
+    <div class="step reveal d1"><div class="step-circle">2</div><h3>Email Ms Dulai</h3><p>Send the station details and client information to <strong style="color:var(--navy)">amy@akdlaw.co.uk</strong>. We confirm availability immediately.</p></div>
+    <div class="step reveal d2"><div class="step-circle">3</div><h3>We attend &amp; report</h3><p>Ms Dulai attends promptly, advises fully, and provides a complete attendance note to your firm on conclusion.</p></div>
+  </div>
+</section>
+<section class="services-sec" id="services">
+  <div class="sec-label">Services</div>
+  <h2>Comprehensive<br><em>station coverage.</em></h2>
+  <p class="section-lead">Covering the full range of police station attendances for instructing firms across East London and North Essex.</p>
+  <div class="services-layout">
+    <ul class="svc-list">
+      <li class="svc-item reveal"><div class="svc-check">✓</div><div><h4>Voluntary Attendance Interviews</h4><p>Advising clients invited voluntGreat — keep going, paste this next chunk immediately after the last line:
+
+```html
+arily for interview under caution — protecting rights from the outset.</p></div></li>
+      <li class="svc-item reveal d1"><div class="svc-check">✓</div><div><h4>Post-Arrest Representation</h4><p>Immediate attendance following arrest — reviewing disclosure and attending the formal recorded interview.</p></div></li>
+      <li class="svc-item reveal d2"><div class="svc-check">✓</div><div><h4>Bail to Return Cover</h4><p>Continued representation when a client returns to the station on bail for further questioning.</p></div></li>
+      <li class="svc-item reveal d3"><div class="svc-check">✓</div><div><h4>Freelance Duty Rota Cover</h4><p>Flexible, ad-hoc cover for any firm on the criminal Legal Aid duty rota — any hour across East London and North Essex.</p></div></li>
+      <li class="svc-item reveal"><div class="svc-check">✓</div><div><h4>Specialist Interview Types</h4><p>PACE interviews, serious crime, road traffic, fraud, financial crime and regulatory investigations.</p></div></li>
+    </ul>
+    <div class="services-right">
+      <div class="stat-box reveal"><div class="num">24/7</div><div class="lbl">Round-the-clock availability — including Christmas &amp; bank holidays</div></div>
+      <div class="stat-box reveal d1"><div class="num">East London &amp; Essex</div><div class="lbl">Primary coverage area — rapid attendance</div></div>
+      <div class="stat-box reveal d2"><div class="num">PACE</div><div class="lbl">Full command of PACE 1984 and all Codes of Practice</div></div>
+      <div class="accred-box reveal d3"><div class="shield-icon"><svg width="40" height="40" viewBox="0 0 44 44" fill="none"><path d="M22 4L6 11V24C6 33.8 13.4 43 22 45C30.6 43 38 33.8 38 24V11L22 4Z" stroke="#C8A96E" stroke-width="1.5" fill="rgba(200,169,110,.1)"/><path d="M14 22L20 29L30 16" stroke="#F0C040" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><p><strong>Law Society Accredited</strong>Ms Dulai holds full Police Station Accreditation — the profession's highest standard for station representation.</p></div>
+    </div>
+  </div>
+</section>
+<section class="about-sec" id="about">
+  <div class="sec-label">About</div>
+  <h2>Ms Amy <em>Dulai</em></h2>
+  <div class="about-layout">
+    <div><div class="about-portrait reveal"><div class="portrait-initials">AD</div><div class="about-portrait-label">Ms Amy Dulai</div></div></div>
+    <div class="reveal d1">
+      <div class="about-title">Accredited Police Station Representative · AKD Law</div>
+      <p class="about-bio">Ms Amy Dulai is an Accredited Police Station Representative and the founding solicitor of AKD Law, established to provide solicitor firms with a reliable, professional and fully qualified freelance representative available at any time.</p>
+      <p class="about-bio">With a thorough command of the Police and Criminal Evidence Act 1984 and its Codes of Practice, Ms Dulai attends police stations across East London and North Essex with confidence and composure — safeguarding clients' rights from the first moment of detention.</p>
+      <p class="about-bio">AKD Law was built for firms. We understand the pressures of the duty rota, the unpredictability of custody timings, and the value of someone who will simply get it done.</p>
+      <div class="cred-tags">
+        <span class="cred-tag">Police Station Accreditation</span>
+        <span class="cred-tag">PACE 1984 &amp; Codes</span>
+        <span class="cred-tag">East London</span>
+        <span class="cred-tag">North Essex</span>
+        <span class="cred-tag">Legal Aid Compliant</span>
+        <span class="cred-tag">Criminal Defence</span>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="contact-sec" id="contact">
+  <div class="sec-label" style="justify-content:center">Instruct AKD Law</div>
+  <h2>Ready when<br>your firm <em>needs us.</em></h2>
+  <p class="section-lead" style="margin:0 auto 3rem;text-align:center">Contact Ms Dulai directly. We respond promptly and can attend at short notice across East London and North Essex — any hour, any day.</p>
+  <div style="margin-bottom:2rem"><a href="mailto:amy@akdlaw.co.uk" class="email-cta">amy@akdlaw.co.uk</a></div>
+  <div><span class="avail-pill"><span class="avail-dot"></span>Available 24 hours · 7 days · 365 days a year</span></div>
+</section>
+<footer>
+  <span class="footer-logo">AKD<span> Law</span></span>
+  <p>Accredited Police Station Representation · East London &amp; North Essex</p>
+  <p>&copy; 2026 AKD Law. All rights reserved.</p>
+</footer>
+<script>
+  var obs = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){e.target.classList.add('in');obs.unobserve(e.target)}
+    });
+  },{threshold:0.1});
+  document.querySelectorAll('.reveal').forEach(function(el){obs.observe(el)});
+</script>
+</body>
+</html>
+```
+
+That's the final chunk — the file is now complete. 
+
+Scroll down in GitHub and click the green **"Commit changes"** button. Tell me when it's done and I'll give you the next step to point akdlaw.co.uk at it.
